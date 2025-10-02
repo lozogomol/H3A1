@@ -1,0 +1,141 @@
+
+:root{
+  --bg: #0b1220;       
+  --panel: #0f1b2e;    
+  --panel-2: #11233f;    
+  --text: #e5e7eb;     
+  --muted: #9aa6b2;    
+  --border: #1f2b44;    
+  --accent:#575b63;
+  --accent-2: #575b63;   
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  background: radial-gradient(80rem 80rem at -10% -10%, #0e1a2b 10%, var(--bg) 60%);
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.app {
+  padding: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-header {
+  margin-bottom: 18px;
+}
+
+.app-header h1 {
+  margin: 0 0 4px;
+  font-size: 28px;
+  letter-spacing: .3px;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: linear-gradient(180deg, var(--panel), #0e1729);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card-title {
+  margin: 0;
+  padding: 14px 16px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.spacer { height: 16px; }
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  background: #0b1424;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+textarea { resize: vertical; }
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(42,109,243,.25);
+  background: #0a1830;
+}
+
+button {
+  padding: 10px 14px;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background .2s ease, transform .05s ease, box-shadow .2s ease;
+}
+
+button:hover {
+  background: var(--accent-2);
+  box-shadow: 0 6px 18px rgba(42,109,243,.25);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.result-box {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  background: #0c1526;
+}
+
+.card-body ol {
+  padding-left: 18px;
+}
+.card-body li {
+  margin: 6px 0;
+  color: var(--text);
+}
+.card-body em {
+  color: var(--muted);
+}
